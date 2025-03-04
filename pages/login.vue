@@ -4,14 +4,34 @@ import { storeToRefs } from "pinia";
 import { useAuthStore } from "@/store/auth";
 const { authenticateUser } = useAuthStore();
 const { authenticated } = storeToRefs(useAuthStore());
+import { toast } from "vue3-toastify";
 const username = ref<string>("");
 const password = ref<string>("");
+const isLoading = ref<boolean>(false);
 
 const handleLogin = async () => {
-  await authenticateUser({
-    username: username.value,
-    password: password.value,
-  });
+  try {
+    isLoading.value = true;
+    if (!username.value || !password.value) {
+      return toast.error("Please enter username and password");
+    }
+    const res = await authenticateUser({
+      username: username.value,
+      password: password.value,
+    });
+
+    if (res.data.value) {
+      router.push("/");
+      toast.success("Login successful");
+    } else {
+      throw new Error("Invalid credentials");
+    }
+  } catch (error) {
+    console.error(error);
+    toast.error("Invalid Login Credentials");
+  } finally {
+    isLoading.value = false;
+  }
 
   if (authenticated) {
     router.push("/");
@@ -56,6 +76,7 @@ const handleLogin = async () => {
         </form>
         <Button
           @click="() => handleLogin()"
+          :disabled="isLoading"
           class="bg-[#6358DC] text-white p-5 w-full"
           >Login</Button
         >

@@ -1,13 +1,7 @@
 <template>
-    <div>
-
-    </div>
+  <div class="text-4xl text-center">About Page</div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts"></script>
 
-</script>
-
-<style scoped>
-
-</style>
+<style scoped></style>

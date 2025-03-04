@@ -7,4 +7,5 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "pinia-plugin-persistedstate/nuxt",
   ],
+  css: ["vue3-toastify/dist/index.css"],
 });
