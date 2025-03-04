@@ -18,9 +18,9 @@ const logout = () => {
       <nav class="bg-white border-b border-gray-200 shadow-sm">
         <div class="container mx-auto flex items-center justify-between p-4">
           <div class="text-2xl font-bold text-gray-800">
-            <!-- <img src="/logo.png" alt="Logo" class="h-12 w-12" /> -->
+            <img src="/logo.png" alt="Logo" class="h-12 w-12 rounded-full" />
           </div>
-          <h1 class="text-xl font-semibold">handleLogin</h1>
+          <!-- <h1 class="text-xl font-semibold">handleLogin</h1> -->
           <div class="flex items-center space-x-6">
             <MyNavLink
               to="/"
@@ -42,7 +42,7 @@ const logout = () => {
         </div>
       </nav>
     </header>
-    <main class="flex-grow">
+    <main class="w-full flex items-center justify-center p-4">
       <slot></slot>
     </main>
     <footer class="bg-gray-100 py-4 text-center">

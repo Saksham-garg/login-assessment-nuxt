@@ -21,18 +21,20 @@ const handleLogin = async () => {
 
 <template>
   <div
-    class="h-[calc(100vh-140px)] max-w-screen-md flex items-center justify-center"
+    class="md:h-[calc(100vh-140px)] max-w-screen-md flex md:flex-row flex-col gap-8 md:items-center md:justify-center w-full"
   >
     <div class="flex-1">
-      <img src="/public/hero-pic.png" alt="Hero_Pic" class="w-full" />
+      <img src="/public/hero-pic.png" alt="Hero_Pic" class="w-full h-full" />
     </div>
-    <div class="flex-1 w-full h-full flex  justify-center">
-      <div class="flex flex-col gap-4 h-full ">
+    <div class="flex-1 w-full h-full">
+      <div
+        class="flex flex-col gap-8 h-full items-center justify-center w-full"
+      >
         <div class="">
           <h1 class="text-3xl text-black">Welcome to</h1>
           <h1 class="text-4xl text-[#6358DC] font-semibold">Design School</h1>
         </div>
-        <form class="flex flex-col gap-4">
+        <form class="flex flex-col gap-4 w-full">
           <TextInput
             id="username"
             name="username"
@@ -52,7 +54,9 @@ const handleLogin = async () => {
             placeholder="Your password"
           />
         </form>
-        <Button @click="() => handleLogin()" class="bg-[#6358DC] text-white p-5"
+        <Button
+          @click="() => handleLogin()"
+          class="bg-[#6358DC] text-white p-5 w-full"
           >Login</Button
         >
       </div>
