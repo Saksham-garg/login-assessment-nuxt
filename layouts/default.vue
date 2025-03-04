@@ -20,7 +20,13 @@ const logout = () => {
           <div class="text-2xl font-bold text-gray-800">
             <img src="/logo.png" alt="Logo" class="h-12 w-12 rounded-full" />
           </div>
-          <!-- <h1 class="text-xl font-semibold">handleLogin</h1> -->
+          <MyNavLink
+            to="https://dummyjson.com/users"
+            class="text-sm font-semibold"
+            target="_blank"
+          >
+            Sample Credentails
+          </MyNavLink>
           <div class="flex items-center space-x-6">
             <MyNavLink
               to="/"

@@ -45,7 +45,21 @@ const handleLogin = async () => {
   >
     <div class="flex-1">
       <img src="/public/hero-pic.png" alt="Hero_Pic" class="w-full h-full" />
+      <div class="max-w-sm mx-auto mt-10 bg-gray-100 rounded-lg shadow-md p-8">
+        <h2 class="text-lg font-bold mb-4">Credentials</h2>
+        <div class="flex flex-col gap-2">
+          <div class="flex justify-between">
+            <span class="text-gray-600">Username:</span>
+            <span class="text-gray-900 font-medium">emilys</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-600">Password:</span>
+            <span class="text-gray-900 font-medium">emilyspass</span>
+          </div>
+        </div>
+      </div>
     </div>
+
     <div class="flex-1 w-full h-full">
       <div
         class="flex flex-col gap-8 h-full items-center justify-center w-full"
